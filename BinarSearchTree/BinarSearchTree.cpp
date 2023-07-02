@@ -152,12 +152,12 @@ int main()
 		{
 			obj.preorder(obj.ROOT);
 			break;
-		} 
+		}  
 		case '4':
 		{
 			obj.postroder(obj.ROOT);
 			break;
-		}
+		} 
 		case '5':
 			return 0;
 
