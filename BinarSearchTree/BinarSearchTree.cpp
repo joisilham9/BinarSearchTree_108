@@ -157,7 +157,7 @@ int main()
 		{
 			obj.postroder(obj.ROOT);
 			break;
-		} 
+		}  
 		case '5':
 			return 0;
 
