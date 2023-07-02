@@ -20,7 +20,7 @@ public:
 
 class BinaryTree
 {
-public : 
+public:
 	Node* ROOT;
 
 	BinaryTree()
@@ -38,8 +38,8 @@ public :
 		Node* parent = NULL;
 		Node* currentnode = NULL;
 		search(element, parent, currentNode); // locate the node which will be the parent of the node to be inserted
-	
-		if (parent == NULL) 
+
+		if (parent == NULL)
 		{
 			ROOT = newNode; // mark the newnode as root
 			return; // exit
@@ -83,4 +83,21 @@ public :
 			preorder(ptr->rightchild);
 		}
 	}
+
+	void preorder(Node* ptr)
+	{
+		if (ROOT == NULL)
+		{
+			cout << "Tree is empty" << endl;
+		return;
+	}
+	if (ptr != NULL)
+	{
+		cout << ptr->info << " ";
+		preorder(ptr->leftchild);
+		preorder(ptr->rightchild);
+	}
+}
+
+
 };
