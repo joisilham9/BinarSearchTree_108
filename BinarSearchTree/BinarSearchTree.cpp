@@ -93,11 +93,25 @@ public:
 	}
 	if (ptr != NULL)
 	{
+		inorder(ptr->leftchild);
 		cout << ptr->info << " ";
-		preorder(ptr->leftchild);
-		preorder(ptr->rightchild);
+		inorder	(ptr->rightchild);
 	}
 }
 
-
+	void postroder(Node* ptr)
+	{
+		//performs the postorder travelsal of the tree
+		if (ROOT == NULL)
+		{
+			cout << "Tree is empty" << endl;
+			return;
+		}
+		if (ptr != NULL)
+		{
+			postroder(ptr->leftchild);
+			postroder(ptr->rightchild);
+			cout << ptr->info << " ";
+		}
+	}
 };
