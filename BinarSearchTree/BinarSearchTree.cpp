@@ -37,7 +37,7 @@ public:
 
 		Node* parent = NULL;
 		Node* currentnode = NULL;
-		search(element, parent, currentNode); // locate the node which will be the parent of the node to be inserted
+		search(element, parent, currentnode);// locate the node which will be the parent of the node to be inserted
 
 		if (parent == NULL)
 		{
@@ -59,7 +59,7 @@ public:
 		// this function searches the currentNode pd the specified node as well as the current node of its parent
 		currentNode = ROOT;
 		parent = NULL;
-		while ((currentNode != NULL) & (currentNode->info != element))
+		while ((currentNode != NULL) &&(currentNode->info != element))
 		{
 			parent = currentNode;
 			if (element < currentNode->info)
@@ -147,19 +147,24 @@ int main()
 		{
 			obj.inorder(obj.ROOT);
 			break;
-		}  
+		}
 		case '3':
 		{
 			obj.preorder(obj.ROOT);
 			break;
-		}  
+		}
 		case '4':
 		{
 			obj.postroder(obj.ROOT);
 			break;
-		}  
+		}
 		case '5':
 			return 0;
+		default:
+		{
+			cout << " invalid option" << endl;
+			break;
+		}
 
 		}
 	}
