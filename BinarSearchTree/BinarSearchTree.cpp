@@ -78,9 +78,9 @@ public:
 		}
 		if (ptr != NULL)
 		{
+			inorder(ptr->leftchild);
 			cout << ptr->info << " ";
-			preorder(ptr->leftchild);
-			preorder(ptr->rightchild);
+			inorder(ptr->rightchild);
 		}
 	}
 
@@ -93,9 +93,9 @@ public:
 	}
 	if (ptr != NULL)
 	{
-		inorder(ptr->leftchild);
 		cout << ptr->info << " ";
-		inorder	(ptr->rightchild);
+		preorder(ptr->leftchild);
+		preorder(ptr->rightchild);
 	}
 }
 
@@ -143,6 +143,24 @@ int main()
 			obj.Insert(word);
 			break;
 		}
+		case '2':
+		{
+			obj.inorder(obj.ROOT);
+			break;
+		}  
+		case '3':
+		{
+			obj.preorder(obj.ROOT);
+			break;
+		} 
+		case '4':
+		{
+			obj.postroder(obj.ROOT);
+			break;
+		}
+		case '5':
+			return 0;
+
 		}
 	}
 
