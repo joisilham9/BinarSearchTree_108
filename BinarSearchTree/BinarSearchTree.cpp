@@ -39,7 +39,7 @@ public :
 		Node* currentnode = NULL;
 		search(element, parent, currentNode); // locate the node which will be the parent of the node to be inserted
 	
-		if (parent == NULL)
+		if (parent == NULL) 
 		{
 			ROOT = newNode; // mark the newnode as root
 			return; // exit
